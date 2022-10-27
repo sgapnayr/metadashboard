@@ -48,6 +48,19 @@
     font-weight: 200;
 }
 
+.Title2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    font-size: 3rem;
+    background: linear-gradient(130deg, rgb(120, 119, 119) 0%, rgb(89, 139, 67) 45%, rgb(218, 239, 136) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, .4);
+    font-weight: 200;
+}
+
 .Icon {
     cursor: pointer;
     transition: .2s all ease-in-out;

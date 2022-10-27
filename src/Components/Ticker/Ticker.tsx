@@ -12,11 +12,6 @@ const Ticker: React.FC<Props> = () => {
                     ↑CPI: 2.3%
                 </div>
             </div>
-            <div className="Ticker">
-                <div className="TickerInfo">
-                    HPI increases
-                </div>
-            </div>
         </div>
     )
 }

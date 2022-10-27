@@ -18,8 +18,9 @@ const TileTemplate: React.FC<Props> = ({ dateValue, setDateValue, sliderActive, 
 
             <Column
                 element={'Rates'}
+                content={'Information'}
                 hasToggle={'Yes'}
-                numberOfTiles={4}
+                numberOfTiles={3}
                 hasChart={'No'}
                 toggle={toggle}
                 setToggle={setToggle}
@@ -28,6 +29,7 @@ const TileTemplate: React.FC<Props> = ({ dateValue, setDateValue, sliderActive, 
 
             <Column
                 element={'Chart'}
+                content={'Information2'}
                 hasToggle={'No'}
                 numberOfTiles={1}
                 hasChart={'No'}
@@ -38,6 +40,7 @@ const TileTemplate: React.FC<Props> = ({ dateValue, setDateValue, sliderActive, 
 
             <Column
                 element={'Demographics'}
+                content={'Information3'}
                 hasToggle={'Yes'}
                 numberOfTiles={2}
                 hasChart={'No'}

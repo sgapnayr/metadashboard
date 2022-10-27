@@ -1,4 +1,4 @@
-import './App.css';
+import './REIP.css';
 import { useState } from 'react'
 import Nav from './Components/Nav/Nav';
 import Ticker from './Components/Ticker/Ticker';
@@ -6,13 +6,13 @@ import TileTemplate from './Components/TileTemplate/TileTemplate';
 import NewsColumns from './Components/News/NewsColumns';
 
 const App: React.FC = () => {
-  const [news, setNews] = useState([])
-  const [isActive, setIsActive] = useState(false)
-  const [dateValue, setDateValue] = useState(5)
-  const [newsCategory, setNewsCategory] = useState('')
-  const [sliderActive, setSliderActive] = useState(true)
-  const [dataName, setDataName] = useState('bitcoin')
-  const [toggle, setToggle] = useState(true);
+  const [news, setNews] = useState<any[]>([])
+  const [isActive, setIsActive] = useState<boolean>(false)
+  const [dateValue, setDateValue] = useState<number>(5)
+  const [newsCategory, setNewsCategory] = useState<string>('')
+  const [sliderActive, setSliderActive] = useState<boolean>(true)
+  const [dataName, setDataName] = useState<string>('bitcoin')
+  const [toggle, setToggle] = useState<boolean>(true);
 
   return (
     <div className="App">

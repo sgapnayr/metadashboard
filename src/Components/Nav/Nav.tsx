@@ -1,5 +1,6 @@
 import './Nav.css'
 import { AiOutlineMenu } from 'react-icons/ai';
+import { BrowserRouter as Router, Link } from 'react-router-dom'
 
 interface Props {
     isActive: boolean
@@ -11,12 +12,14 @@ const Nav: React.FC<Props> = ({ isActive, setIsActive }) => {
         setIsActive(!isActive)
     }
 
+    const pathname = window.location.pathname
+
     return (
         <div>
             <div className="NavBar">
                 <div className="LeftSideNavBar">
-                    <div className='Title'>
-                        REIP
+                    <div className={pathname === '/reip' ? 'Title' : 'Title2'}>
+                        {pathname === '/reip' ? 'REIP' : 'INNERG'}
                     </div>
                     <div className="CenterNavBar">
                     </div>
@@ -29,9 +32,9 @@ const Nav: React.FC<Props> = ({ isActive, setIsActive }) => {
             </div>
 
             <div className={isActive ? "Menu MenuActive" : 'Menu'}>
-                <a href="">Home</a>
-                <a href="">Dash</a>
-                <a href="">News</a>
+
+                <Link to='/reip'>REIP</Link>
+                <Link to='/innerg'>INNERG</Link>
             </div>
         </div>
     )

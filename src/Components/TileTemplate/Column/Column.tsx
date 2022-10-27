@@ -4,6 +4,7 @@ import './Column.css'
 
 interface Props {
     element: any
+    content: string
     hasToggle: string
     numberOfTiles: number
     hasChart: string
@@ -12,13 +13,14 @@ interface Props {
     readonly wideRow: any
 }
 
-const Column: React.FC<Props> = ({ element, hasToggle, numberOfTiles, hasChart, toggle, setToggle, wideRow }) => {
+const Column: React.FC<Props> = ({ element, content, hasToggle, numberOfTiles, hasChart, toggle, setToggle, wideRow }) => {
     const [tiles, setTiles] = useState<any[]>([])
+    const [idx, setIdx] = useState<number>(0)
 
     const renderTiles = () => {
         const tiles: SetStateAction<any[]> = []
         for (let i = 0; i < numberOfTiles; i++) {
-            tiles.push(<Tile element={element} hasToggle={hasToggle} hasChart={hasChart} toggle={toggle} wideRow={wideRow} />)
+            tiles.push(<Tile element={element} idx={idx} content={content} hasToggle={hasToggle} hasChart={hasChart} toggle={toggle} wideRow={wideRow} />)
         }
         setTiles(tiles)
     }
@@ -29,12 +31,43 @@ const Column: React.FC<Props> = ({ element, hasToggle, numberOfTiles, hasChart, 
 
     return (
         <div className="Column">
-            {tiles.map((idx) => {
+            {tiles.map((tile, idx) => {
                 return (
-                    <Tile key={idx} element={element} hasToggle={hasToggle} hasChart={hasChart} toggle={toggle} wideRow={wideRow} />
+                    <>
+                        <Tile element={element} key={idx} idx={idx} content={content} hasToggle={hasToggle} hasChart={hasChart} toggle={toggle} wideRow={wideRow} />
+                    </>
                 )
             })}
 
+            {/* {numberOfTiles === 1 ?
+                <>
+                    <Tile element={element} hasToggle={hasToggle} hasChart={hasChart} toggle={toggle} wideRow={wideRow} />
+                </> :
+                numberOfTiles === 2 ?
+                    <>
+                        <Tile element={element} hasToggle={hasToggle} hasChart={hasChart} toggle={toggle} wideRow={wideRow} />
+                        <Tile element={element} hasToggle={hasToggle} hasChart={hasChart} toggle={toggle} wideRow={wideRow} />
+                    </> : numberOfTiles === 3 ?
+                        <>
+                            <Tile element={element} hasToggle={hasToggle} hasChart={hasChart} toggle={toggle} wideRow={wideRow} />
+                            <Tile element={element} hasToggle={hasToggle} hasChart={hasChart} toggle={toggle} wideRow={wideRow} />
+                            <Tile element={element} hasToggle={hasToggle} hasChart={hasChart} toggle={toggle} wideRow={wideRow} />
+                        </> :
+                        numberOfTiles === 4 ?
+                            <>
+                                <Tile element={element} hasToggle={hasToggle} hasChart={hasChart} toggle={toggle} wideRow={wideRow} />
+                                <Tile element={element} hasToggle={hasToggle} hasChart={hasChart} toggle={toggle} wideRow={wideRow} />
+                                <Tile element={element} hasToggle={hasToggle} hasChart={hasChart} toggle={toggle} wideRow={wideRow} />
+                                <Tile element={element} hasToggle={hasToggle} hasChart={hasChart} toggle={toggle} wideRow={wideRow} />
+                            </> :
+                            numberOfTiles === 5 ?
+                                <>
+                                    <Tile element={element} hasToggle={hasToggle} hasChart={hasChart} toggle={toggle} wideRow={wideRow} />
+                                    <Tile element={element} hasToggle={hasToggle} hasChart={hasChart} toggle={toggle} wideRow={wideRow} />
+                                    <Tile element={element} hasToggle={hasToggle} hasChart={hasChart} toggle={toggle} wideRow={wideRow} />
+                                    <Tile element={element} hasToggle={hasToggle} hasChart={hasChart} toggle={toggle} wideRow={wideRow} />
+                                    <Tile element={element} hasToggle={hasToggle} hasChart={hasChart} toggle={toggle} wideRow={wideRow} />
+                                </> : null} */}
         </div>
     )
 }
