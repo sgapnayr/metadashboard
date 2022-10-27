@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import REIP from './REIP';
+import REIP from './App';
 import INNERG from './INNERG';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
