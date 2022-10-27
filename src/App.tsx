@@ -12,6 +12,7 @@ const App: React.FC = () => {
   const [newsCategory, setNewsCategory] = useState('')
   const [sliderActive, setSliderActive] = useState(true)
   const [dataName, setDataName] = useState('bitcoin')
+  const [toggle, setToggle] = useState(true);
 
   return (
     <div className="App">
@@ -29,6 +30,8 @@ const App: React.FC = () => {
         setSliderActive={setSliderActive}
         dataName={dataName}
         setDataName={setDataName}
+        toggle={toggle}
+        setToggle={setToggle}
       />
 
       <NewsColumns

@@ -8,9 +8,11 @@ interface Props {
     setSliderActive: React.Dispatch<React.SetStateAction<boolean>>
     dataName: string
     setDataName: React.Dispatch<React.SetStateAction<string>>
+    toggle: any
+    setToggle: any
 }
 
-const TileTemplate: React.FC<Props> = ({ dateValue, setDateValue, sliderActive, setSliderActive, dataName, setDataName }) => {
+const TileTemplate: React.FC<Props> = ({ dateValue, setDateValue, sliderActive, setSliderActive, dataName, setDataName, toggle, setToggle }) => {
     return (
         <div className='Tiles'>
 
@@ -19,6 +21,8 @@ const TileTemplate: React.FC<Props> = ({ dateValue, setDateValue, sliderActive, 
                 hasToggle={'Yes'}
                 numberOfTiles={4}
                 hasChart={'No'}
+                toggle={toggle}
+                setToggle={setToggle}
             />
 
             <Column
@@ -26,13 +30,17 @@ const TileTemplate: React.FC<Props> = ({ dateValue, setDateValue, sliderActive, 
                 hasToggle={'No'}
                 numberOfTiles={1}
                 hasChart={'No'}
+                toggle={toggle}
+                setToggle={setToggle}
             />
 
             <Column
                 element={'Demographics'}
-                hasToggle={'No'}
+                hasToggle={'Yes'}
                 numberOfTiles={2}
                 hasChart={'No'}
+                toggle={toggle}
+                setToggle={setToggle}
             />
 
         </div>

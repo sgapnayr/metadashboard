@@ -25,13 +25,7 @@ const ToggleInnerContainer = styled.div`
   cursor: pointer;
 `;
 
-function Slider() {
-  const [toggled, setToggle] = useState(true);
-
-  const handleToggle = () => {
-    setToggle(!toggled);
-  };
-
+function Slider({ toggled, handleToggle }) {
   const outerWidth = 55;
 
   return (
