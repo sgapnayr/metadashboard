@@ -22,13 +22,13 @@ const Column: React.FC<Props> = ({ element, hasToggle, numberOfTiles, hasChart }
 
     useEffect(() => {
         renderTiles()
-    }, [tiles])
+    }, [])
 
     return (
         <div className="Column">
-            {tiles.map((value, idx) => {
+            {tiles.map((idx) => {
                 return (
-                    <Tile element={element} hasToggle={hasToggle} hasChart={hasChart} />
+                    <Tile key={idx} element={element} hasToggle={hasToggle} hasChart={hasChart} />
                 )
             })}
 

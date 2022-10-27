@@ -1,6 +1,5 @@
 import './App.css';
 import { useState } from 'react'
-import News from './Components/News/News';
 import Nav from './Components/Nav/Nav';
 import Ticker from './Components/Ticker/Ticker';
 import TileTemplate from './Components/TileTemplate/TileTemplate';

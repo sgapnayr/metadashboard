@@ -17,14 +17,14 @@ const TileTemplate: React.FC<Props> = ({ dateValue, setDateValue, sliderActive, 
             <Column
                 element={'Rates'}
                 hasToggle={'Yes'}
-                numberOfTiles={1}
+                numberOfTiles={2}
                 hasChart={'No'}
             />
 
             <Column
                 element={'Chart'}
                 hasToggle={'No'}
-                numberOfTiles={2}
+                numberOfTiles={1}
                 hasChart={'No'}
             />
 
