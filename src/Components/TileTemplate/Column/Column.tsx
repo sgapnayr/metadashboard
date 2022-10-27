@@ -9,15 +9,16 @@ interface Props {
     hasChart: string
     toggle: any
     setToggle: any
+    readonly wideRow: any
 }
 
-const Column: React.FC<Props> = ({ element, hasToggle, numberOfTiles, hasChart, toggle, setToggle }) => {
+const Column: React.FC<Props> = ({ element, hasToggle, numberOfTiles, hasChart, toggle, setToggle, wideRow }) => {
     const [tiles, setTiles] = useState<any[]>([])
 
     const renderTiles = () => {
         const tiles: SetStateAction<any[]> = []
         for (let i = 0; i < numberOfTiles; i++) {
-            tiles.push(<Tile element={element} hasToggle={hasToggle} hasChart={hasChart} toggle={toggle} />)
+            tiles.push(<Tile element={element} hasToggle={hasToggle} hasChart={hasChart} toggle={toggle} wideRow={wideRow} />)
         }
         setTiles(tiles)
     }
@@ -30,7 +31,7 @@ const Column: React.FC<Props> = ({ element, hasToggle, numberOfTiles, hasChart, 
         <div className="Column">
             {tiles.map((idx) => {
                 return (
-                    <Tile key={idx} element={element} hasToggle={hasToggle} hasChart={hasChart} toggle={toggle} />
+                    <Tile key={idx} element={element} hasToggle={hasToggle} hasChart={hasChart} toggle={toggle} wideRow={wideRow} />
                 )
             })}
 
