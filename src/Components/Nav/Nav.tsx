@@ -33,7 +33,7 @@ const Nav: React.FC<Props> = ({ isActive, setIsActive }) => {
 
             <div className={isActive ? "Menu MenuActive" : 'Menu'}>
 
-                <Link to='/reip'>REIP</Link>
+                <Link to='/'>REIP</Link>
                 <Link to='/innerg'>INNERG</Link>
             </div>
         </div>

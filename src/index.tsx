@@ -14,7 +14,7 @@ root.render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route path='/reip' element={<REIP />} />
+        <Route path='/' element={<REIP />} />
         <Route path='/innerg' element={<INNERG />} />
       </Routes>
     </Router>
