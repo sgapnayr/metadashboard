@@ -9,9 +9,6 @@ const Ticker: React.FC<Props> = () => {
         <div className="TickerWrapper">
             <div className="Ticker">
                 <div className="TickerInfo">
-                    ↑CPI: 2.3%
-                </div>
-                <div className="TickerInfo">
                     This article is from Full Stack Economics, a newsletter about the economy, technology, and public policy.
                     In March 2021, a woman in the D.C. area put her house on the market and got 88 bids—including 76 all-cash offers and 15 from people who hadn’t bothered to visit the property in person.
                     “The offers just kept coming,” she told CNN at the time. “I’m thinking, ‘This is just out of control.’ ”

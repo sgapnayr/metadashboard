@@ -16,6 +16,7 @@
     font-style: italic;
     background-color: transparent;
     font-size: .75rem;
+    overflow: hidden;
 }
 
 @keyframes slidein {
@@ -50,5 +51,4 @@
     text-shadow: 1px 1px 10px rgba(0, 0, 0, .1);
     font-weight: bold;
     font-size: 1rem;
-    overflow: hidden;
 }
