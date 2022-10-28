@@ -11,21 +11,19 @@ interface Props {
 const NewsColumns: React.FC<Props> = ({ news, setNews, newsCategory, setNewsCategory }) => {
     return (
         <div className="NewsColumns">
+
             <News
                 news={news}
                 setNews={setNews}
                 newsCategory={newsCategory}
                 setNewsCategory={setNewsCategory} />
+
             <News
                 news={news}
                 setNews={setNews}
                 newsCategory={newsCategory}
                 setNewsCategory={setNewsCategory} />
-            <News
-                news={news}
-                setNews={setNews}
-                newsCategory={newsCategory}
-                setNewsCategory={setNewsCategory} />
+
         </div>
     )
 }
