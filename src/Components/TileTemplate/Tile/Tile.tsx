@@ -46,7 +46,9 @@ const Tile: React.FC<Props> = ({ dateValue, setDateValue, element, content, idx,
         <>
             <div className='Tile' onClick={handleToggle}>
                 {hasToggle === 'Yes' ? <Toggle toggled={toggled} handleToggle={handleToggle} /> : null}
-                {element}
+                <div className="TileHeader">
+                    {element}
+                </div>
                 {hasChart === 'Yes' ? <ShowChart dateValue={dateValue} setDateValue={setDateValue} /> : null}
                 {hasFileTree ? <FileTree /> : null}
                 {/* {idx === 0 ? content : ' NOT'} */}
