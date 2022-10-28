@@ -1,0 +1,7 @@
+.FileTree {
+    display: flex;
+    height: 90%;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+}

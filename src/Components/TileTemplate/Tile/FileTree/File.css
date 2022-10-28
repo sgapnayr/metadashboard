@@ -1,7 +1,14 @@
-.FileTree {}
-
 .File {
     transition: .1s all ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin: .25rem;
+    font-size: 1rem;
+    font-weight: bold;
+    transform: translateX(-10%);
 }
 
 .File:hover {
@@ -23,14 +30,4 @@
 
 .FileTreeIconOpen {
     transform: rotateZ(90deg);
-}
-
-.SubFile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.HideFile {
-    display: none;
 }

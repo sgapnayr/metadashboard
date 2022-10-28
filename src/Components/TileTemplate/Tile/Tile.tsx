@@ -3,7 +3,7 @@ import './Tile.css'
 import Toggle from './Toggle'
 import { useState } from 'react'
 import styled from "styled-components";
-import FileTree from './FileTree';
+import FileTree from './FileTree/FileTree';
 
 interface Props {
     element: string
@@ -46,8 +46,8 @@ const Tile: React.FC<Props> = ({ element, content, idx, hasToggle, hasChart, tog
                 {hasToggle === 'Yes' ? <Toggle toggled={toggled} handleToggle={handleToggle} /> : null}
                 {element}
                 {hasChart === 'Yes' ? <ShowChart /> : null}
+                {hasFileTree ? <FileTree /> : null}
                 {/* {idx === 0 ? content : ' NOT'} */}
-                {hasFileTree ? <FileTree hasFileTree={hasFileTree} /> : null}
             </div >
         </>
     )
