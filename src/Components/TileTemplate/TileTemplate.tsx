@@ -26,6 +26,8 @@ const TileTemplate: React.FC<Props> = ({ dateValue, setDateValue, sliderActive, 
                 setToggle={setToggle}
                 wideRow={true}
                 hasFileTree={false}
+                dateValue={dateValue}
+                setDateValue={setDateValue}
             />
 
             <Column
@@ -38,6 +40,8 @@ const TileTemplate: React.FC<Props> = ({ dateValue, setDateValue, sliderActive, 
                 setToggle={setToggle}
                 wideRow={false}
                 hasFileTree={false}
+                dateValue={dateValue}
+                setDateValue={setDateValue}
             />
 
             <Column
@@ -50,6 +54,8 @@ const TileTemplate: React.FC<Props> = ({ dateValue, setDateValue, sliderActive, 
                 setToggle={setToggle}
                 wideRow={false}
                 hasFileTree={true}
+                dateValue={dateValue}
+                setDateValue={setDateValue}
             />
 
         </div>

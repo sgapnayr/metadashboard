@@ -1,4 +1,4 @@
-import ShowChart from './Chart'
+import ShowChart from './Chart/Chart.js'
 import './Tile.css'
 import Toggle from './Toggle'
 import { useState } from 'react'
@@ -6,6 +6,8 @@ import styled from "styled-components";
 import FileTree from './FileTree/FileTree';
 
 interface Props {
+    dateValue: number
+    setDateValue: React.Dispatch<React.SetStateAction<number>>
     element: string
     idx: number
     content: string
@@ -33,7 +35,7 @@ const TileDiv = styled.div<Props>`
     box-shadow: 1px 1px 15px rgba(0, 0, 0, .25);
 `;
 
-const Tile: React.FC<Props> = ({ element, content, idx, hasToggle, hasChart, toggle, wideRow, hasFileTree }) => {
+const Tile: React.FC<Props> = ({ dateValue, setDateValue, element, content, idx, hasToggle, hasChart, toggle, wideRow, hasFileTree }) => {
     const [toggled, setToggle] = useState(true);
 
     const handleToggle = () => {
@@ -45,7 +47,7 @@ const Tile: React.FC<Props> = ({ element, content, idx, hasToggle, hasChart, tog
             <div className='Tile' onClick={handleToggle}>
                 {hasToggle === 'Yes' ? <Toggle toggled={toggled} handleToggle={handleToggle} /> : null}
                 {element}
-                {hasChart === 'Yes' ? <ShowChart /> : null}
+                {hasChart === 'Yes' ? <ShowChart dateValue={dateValue} setDateValue={setDateValue} /> : null}
                 {hasFileTree ? <FileTree /> : null}
                 {/* {idx === 0 ? content : ' NOT'} */}
             </div >

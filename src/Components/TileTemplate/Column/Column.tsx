@@ -3,6 +3,8 @@ import Tile from '../Tile/Tile'
 import './Column.css'
 
 interface Props {
+    dateValue: number
+    setDateValue: React.Dispatch<React.SetStateAction<number>>
     element: any
     content: string
     hasToggle: string
@@ -14,7 +16,7 @@ interface Props {
     hasFileTree: boolean
 }
 
-const Column: React.FC<Props> = ({ element, content, hasToggle, numberOfTiles, hasChart, toggle, setToggle, wideRow, hasFileTree }) => {
+const Column: React.FC<Props> = ({ dateValue, setDateValue, element, content, hasToggle, numberOfTiles, hasChart, toggle, setToggle, wideRow, hasFileTree }) => {
     // const [tiles, setTiles] = useState<any[]>([])
     const [idx, setIdx] = useState<number>(0)
 
@@ -49,7 +51,10 @@ const Column: React.FC<Props> = ({ element, content, hasToggle, numberOfTiles, h
                         hasChart={hasChart}
                         toggle={toggle}
                         wideRow={wideRow}
-                        hasFileTree={hasFileTree} />
+                        hasFileTree={hasFileTree}
+                        dateValue={dateValue}
+                        setDateValue={setDateValue} />
+
                 </> :
                 numberOfTiles === 2 ?
                     <>
@@ -60,7 +65,9 @@ const Column: React.FC<Props> = ({ element, content, hasToggle, numberOfTiles, h
                             hasChart={hasChart}
                             toggle={toggle}
                             wideRow={wideRow}
-                            hasFileTree={hasFileTree} />
+                            hasFileTree={hasFileTree}
+                            dateValue={dateValue}
+                            setDateValue={setDateValue} />
                         <Tile
                             element={element}
                             hasToggle={hasToggle}
@@ -68,7 +75,9 @@ const Column: React.FC<Props> = ({ element, content, hasToggle, numberOfTiles, h
                             hasChart={hasChart}
                             toggle={toggle}
                             wideRow={wideRow}
-                            hasFileTree={hasFileTree} />
+                            hasFileTree={hasFileTree}
+                            dateValue={dateValue}
+                            setDateValue={setDateValue} />
                     </> : numberOfTiles === 3 ?
                         <>
                             <Tile
@@ -78,7 +87,9 @@ const Column: React.FC<Props> = ({ element, content, hasToggle, numberOfTiles, h
                                 hasChart={hasChart}
                                 toggle={toggle}
                                 wideRow={wideRow}
-                                hasFileTree={hasFileTree} />
+                                hasFileTree={hasFileTree}
+                                dateValue={dateValue}
+                                setDateValue={setDateValue} />
                             <Tile
                                 element={element}
                                 hasToggle={hasToggle}
@@ -86,7 +97,9 @@ const Column: React.FC<Props> = ({ element, content, hasToggle, numberOfTiles, h
                                 hasChart={hasChart}
                                 toggle={toggle}
                                 wideRow={wideRow}
-                                hasFileTree={hasFileTree} />
+                                hasFileTree={hasFileTree}
+                                dateValue={dateValue}
+                                setDateValue={setDateValue} />
                             <Tile
                                 element={element}
                                 hasToggle={hasToggle}
@@ -94,7 +107,9 @@ const Column: React.FC<Props> = ({ element, content, hasToggle, numberOfTiles, h
                                 hasChart={hasChart}
                                 toggle={toggle}
                                 wideRow={wideRow}
-                                hasFileTree={hasFileTree} />
+                                hasFileTree={hasFileTree}
+                                dateValue={dateValue}
+                                setDateValue={setDateValue} />
                         </> :
                         numberOfTiles === 4 ?
                             <>
@@ -105,7 +120,9 @@ const Column: React.FC<Props> = ({ element, content, hasToggle, numberOfTiles, h
                                     hasChart={hasChart}
                                     toggle={toggle}
                                     wideRow={wideRow}
-                                    hasFileTree={hasFileTree} />
+                                    hasFileTree={hasFileTree}
+                                    dateValue={dateValue}
+                                    setDateValue={setDateValue} />
                                 <Tile
                                     element={element}
                                     hasToggle={hasToggle}
@@ -113,7 +130,9 @@ const Column: React.FC<Props> = ({ element, content, hasToggle, numberOfTiles, h
                                     hasChart={hasChart}
                                     toggle={toggle}
                                     wideRow={wideRow}
-                                    hasFileTree={hasFileTree} />
+                                    hasFileTree={hasFileTree}
+                                    dateValue={dateValue}
+                                    setDateValue={setDateValue} />
                                 <Tile
                                     element={element}
                                     hasToggle={hasToggle}
@@ -121,7 +140,9 @@ const Column: React.FC<Props> = ({ element, content, hasToggle, numberOfTiles, h
                                     hasChart={hasChart}
                                     toggle={toggle}
                                     wideRow={wideRow}
-                                    hasFileTree={hasFileTree} />
+                                    hasFileTree={hasFileTree}
+                                    dateValue={dateValue}
+                                    setDateValue={setDateValue} />
                                 <Tile
                                     element={element}
                                     hasToggle={hasToggle}
@@ -129,7 +150,9 @@ const Column: React.FC<Props> = ({ element, content, hasToggle, numberOfTiles, h
                                     hasChart={hasChart}
                                     toggle={toggle}
                                     wideRow={wideRow}
-                                    hasFileTree={hasFileTree} />
+                                    hasFileTree={hasFileTree}
+                                    dateValue={dateValue}
+                                    setDateValue={setDateValue} />
                             </> : null}
         </div>
     )

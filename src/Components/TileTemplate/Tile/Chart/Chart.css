@@ -1,0 +1,24 @@
+.Chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: .25rem;
+    padding: 1rem;
+    flex-direction: column;
+}
+
+.DateButtons {
+    margin: 1rem 0;
+    align-items: center;
+    display: flex;
+}
+
+button {
+    background: none;
+    border: none;
+    color: white;
+    transition: .2s all ease-in-out;
+    border-radius: 5px;
+    cursor: pointer;
+}

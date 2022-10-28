@@ -1,6 +1,6 @@
 import BarChart from '../Chart/Bar';
 import News from '../News/News';
-import ShowChart from './Tile/Chart';
+import ShowChart from './Tile/Chart/Chart.js';
 import { useState } from 'react'
 import Slider from './Tile/Toggle';
 

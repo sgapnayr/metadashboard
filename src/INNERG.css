@@ -357,19 +357,6 @@ a:hover {
     justify-content: flex-start;
 }
 
-button {
-    padding: .25rem;
-    border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, .2);
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, .2);
-    margin: .5rem .25rem;
-    transition: .1s all ease-in-out;
-    cursor: pointer;
-    background: var(--color4);
-    color: rgb(255, 255, 255);
-    z-index: 0;
-}
-
 button:hover {
     background-color: var(--color2);
     color: var(--color5);
