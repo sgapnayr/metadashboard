@@ -21,7 +21,6 @@ const News: React.FC<Props> = ({ news, setNews, newsCategory, setNewsCategory, }
         }
     };
 
-
     async function GetNews() {
         // await Axios.get(newsUrl).then(res => console.log(res.data.results))
         Axios.request(options).then(function (response) {
