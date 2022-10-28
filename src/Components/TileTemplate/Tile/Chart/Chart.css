@@ -8,12 +8,10 @@
 }
 
 .DateButtons {
-    width: 100%;
     margin: 1rem 0;
-    align-items: center;
     display: flex;
     justify-content: center;
-    align-items: center;
+    flex-direction: row;
 }
 
 button {

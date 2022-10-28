@@ -25,7 +25,7 @@ const News: React.FC<Props> = ({ news, setNews, newsCategory, setNewsCategory, }
     async function GetNews() {
         // await Axios.get(newsUrl).then(res => console.log(res.data.results))
         Axios.request(options).then(function (response) {
-            console.log(response.data);
+            setNews(response.data);
         }).catch(function (error) {
             console.error(error);
         });
@@ -55,7 +55,8 @@ const News: React.FC<Props> = ({ news, setNews, newsCategory, setNewsCategory, }
 
             <div className='News'>
                 <div className="NewsList">
-                    {news.map(newsItem => {
+
+                    {/* {news.map(newsItem => {
                         return (
                             <>
                                 <div className="NewsCard" key={newsItem}>
@@ -65,7 +66,7 @@ const News: React.FC<Props> = ({ news, setNews, newsCategory, setNewsCategory, }
                                 </div>
                             </>
                         )
-                    })}
+                    })} */}
                 </div>
             </div>
         </div>

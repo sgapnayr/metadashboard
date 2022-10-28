@@ -100,10 +100,10 @@ export default function ShowChart({ dateValue, setDateValue, coin = 'bitcoin' })
                 />
                 <div className="DateButtons">
                     <Button dateValue={7} setDateValue={setDateValue} />
-                    <Button dateValue={30} setDateValue={setDateValue} />
+                    {/* <Button dateValue={30} setDateValue={setDateValue} /> */}
                     <Button dateValue={180} setDateValue={setDateValue} />
                     <Button dateValue={365} setDateValue={setDateValue} />
-                    <Button dateValue={1200} setDateValue={setDateValue} />
+                    {/* <Button dateValue={1200} setDateValue={setDateValue} /> */}
                     <Button dateValue={1501} setDateValue={setDateValue} />
                 </div>
             </div>
