@@ -3,7 +3,7 @@ import styled from "styled-components";
 const ToggleOuterContainer = styled.div`
   position: relative;
   width: ${props => props.outerWidth}px;
-  height: 20px;
+  height: 30px;
   border-radius: 50px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
   background-color: ${props => props.toggled === false ? '#2dceff' : '#b6b6b64d'};
@@ -26,11 +26,11 @@ const ToggleInnerContainer = styled.div`
 `;
 
 function Slider({ toggled, handleToggle }) {
-  const outerWidth = 45;
+  const outerWidth = 50;
 
   return (
     <ToggleOuterContainer toggled={toggled} outerWidth={outerWidth} onClick={handleToggle}>
-      <ToggleInnerContainer outerWidth={outerWidth} size={20} toggled={toggled} />
+      <ToggleInnerContainer outerWidth={outerWidth} size={30} toggled={toggled} />
     </ToggleOuterContainer>
   );
 }
