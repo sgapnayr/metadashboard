@@ -8,9 +8,11 @@
     overflow: scroll;
     height: 30vh;
     width: 100%;
-    margin: 1rem 1rem;
+    margin: 1rem .5rem;
     flex-direction: column;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, .5) inset;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .5);
+    background: rgba(255, 255, 255, .015);
+    border-radius: 10px;
 }
 
 .NewsHeading {
