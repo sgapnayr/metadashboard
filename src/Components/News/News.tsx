@@ -5,8 +5,8 @@ import { useEffect } from 'react'
 interface Props {
     news: any[]
     setNews: React.Dispatch<React.SetStateAction<any[]>>
-    newsCategory: string
-    setNewsCategory: React.Dispatch<React.SetStateAction<string>>
+    newsCategory: any[]
+    setNewsCategory: React.Dispatch<React.SetStateAction<any[]>>
 }
 
 const News: React.FC<Props> = ({ news, setNews, newsCategory, setNewsCategory, }) => {
@@ -45,9 +45,9 @@ const News: React.FC<Props> = ({ news, setNews, newsCategory, setNewsCategory, }
                 <div className="NewsTitle">
                     Category:
                     <select name="" id="" onChange={handleNewsCategory}>
-                        <option value="technology">Technology</option>
+                        <option value="real-estate">Real Estate</option>
                         <option value="business">Business</option>
-                        <option value="commercial">Commercial</option>
+                        <option value="technology">Technology</option>
                     </select>
                 </div>
             </div>

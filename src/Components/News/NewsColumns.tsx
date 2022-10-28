@@ -4,8 +4,8 @@ import News from "./News"
 interface Props {
     news: any[]
     setNews: React.Dispatch<React.SetStateAction<any[]>>
-    newsCategory: string
-    setNewsCategory: React.Dispatch<React.SetStateAction<string>>
+    newsCategory: any[]
+    setNewsCategory: React.Dispatch<React.SetStateAction<any[]>>
 }
 
 const NewsColumns: React.FC<Props> = ({ news, setNews, newsCategory, setNewsCategory }) => {

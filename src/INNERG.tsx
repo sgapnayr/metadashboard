@@ -9,7 +9,7 @@ const App: React.FC = () => {
     const [news, setNews] = useState<any[]>([])
     const [isActive, setIsActive] = useState<boolean>(false)
     const [dateValue, setDateValue] = useState<number>(5)
-    const [newsCategory, setNewsCategory] = useState<string>('')
+    const [newsCategory, setNewsCategory] = useState<any[]>(['main'])
     const [sliderActive, setSliderActive] = useState<boolean>(true)
     const [dataName, setDataName] = useState<string>('bitcoin')
     const [toggle, setToggle] = useState<boolean>(true);
