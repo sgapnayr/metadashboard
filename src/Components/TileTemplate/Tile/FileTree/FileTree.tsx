@@ -10,7 +10,7 @@ const FileTree: React.FC<Props> = ({ }) => {
         <div className='FileTree'>
             <File fileName={'Commercial'} />
             <File fileName={'Residential'} />
-            <File fileName={'Residential'} />
+            <File fileName={'Other'} />
         </div >
     )
 }
