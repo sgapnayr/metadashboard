@@ -27,8 +27,8 @@ const FileTree: React.FC<Props> = ({ hasFileTree }) => {
                             <div>File 1</div>
                         </div>
                         <div className="SubFile">
-                            <div className={fileTreeOpen ? 'FileTreeIconOpen' : 'FileTreeIcon'}><FiArrowRight /></div>
-                            <div>File 1</div>
+                            <div className='FileTreeIcon'><FiArrowRight /></div>
+                            <div>File 2</div>
                         </div>
                     </ul>
                 </div>
