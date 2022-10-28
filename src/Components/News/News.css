@@ -8,7 +8,7 @@
     overflow: scroll;
     height: 30vh;
     width: 100%;
-    margin: 1.5rem 1rem;
+    margin: 1rem 1rem;
     flex-direction: column;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, .5) inset;
 }
@@ -17,7 +17,7 @@
     display: grid;
     justify-content: center;
     align-items: center;
-    margin: 1rem;
+    margin: .5rem;
 }
 
 .NewsTitle {
@@ -39,6 +39,7 @@ select {
     text-shadow: 1px 1px 15px rgba(255, 255, 255, .25);
     outline: none;
     transition: .2s all ease-in-out;
+    background: rgb(39, 36, 39);
 }
 
 select:hover {
@@ -48,7 +49,7 @@ select:hover {
 }
 
 select:focus {
-    box-shadow: 1px 1px 10px 10px rgba(255, 255, 255, .25);
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, .25);
 }
 
 .News {
@@ -97,9 +98,10 @@ select:focus {
     transition: .2s all ease-in-out;
     text-shadow: 1px 1px 10px rgba(0, 0, 0, .4);
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, .2);
     margin: .5rem;
+    background: rgb(39, 36, 39);
 }
 
 .NewsCard:hover {
