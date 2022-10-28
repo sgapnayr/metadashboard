@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   background: rgb(159, 159, 159);
-  background: linear-gradient(130deg, rgb(248, 248, 248) 0%, rgb(172, 125, 179) 45%, rgb(165, 96, 139) 100%);
+  background: linear-gradient(130deg, rgb(215, 215, 215) 0%, rgb(190, 155, 189) 45%, rgb(229, 79, 172) 100%);
 }
 
 body {
@@ -218,8 +218,9 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
-  margin: .5rem;
+  width: 100%;
+  margin: .25rem;
+  padding: 1rem;
 }
 
 .DateDiv {

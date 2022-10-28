@@ -35,7 +35,7 @@ export default function ShowChart({ value = 40, coin = 'bitcoin' }) {
                 ],
                 lineTension: .4,
                 borderColor: [
-                    '#2dceff',
+                    'rgba(255, 255, 255, 1)',
                     'rgba(255, 255, 255, 1)',
                 ],
                 borderWidth: 3,
@@ -83,7 +83,9 @@ export default function ShowChart({ value = 40, coin = 'bitcoin' }) {
     };
     return (
         <>
-            <Line data={data} options={options} />
+            <div className="Chart">
+                <Line data={data} options={options} />
+            </div>
         </>
     )
 }

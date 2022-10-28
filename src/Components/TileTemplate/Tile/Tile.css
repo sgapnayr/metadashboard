@@ -7,7 +7,7 @@
     flex-direction: column;
     overflow: scroll;
     color: white;
-    transition: .1s all ease-in-out;
+    transition: .2s all ease-in-out;
     cursor: pointer;
     flex: 1;
     border-radius: 10px;
@@ -23,5 +23,5 @@
 
 .Tile:active {
     color: var(--color4);
-    transform: scale(.8);
+    background: rgba(0, 0, 0, .15);
 }

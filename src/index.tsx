@@ -4,7 +4,6 @@ import REIP from './App';
 import INNERG from './INNERG';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );

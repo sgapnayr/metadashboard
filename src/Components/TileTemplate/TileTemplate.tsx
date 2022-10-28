@@ -25,6 +25,7 @@ const TileTemplate: React.FC<Props> = ({ dateValue, setDateValue, sliderActive, 
                 toggle={toggle}
                 setToggle={setToggle}
                 wideRow={false}
+                hasFileTree={false}
             />
 
             <Column
@@ -32,21 +33,23 @@ const TileTemplate: React.FC<Props> = ({ dateValue, setDateValue, sliderActive, 
                 content={'Information2'}
                 hasToggle={'No'}
                 numberOfTiles={1}
-                hasChart={'No'}
+                hasChart={'Yes'}
                 toggle={toggle}
                 setToggle={setToggle}
                 wideRow={true}
+                hasFileTree={false}
             />
 
             <Column
                 element={'Demographics'}
                 content={'Information3'}
-                hasToggle={'Yes'}
+                hasToggle={'No'}
                 numberOfTiles={2}
                 hasChart={'No'}
                 toggle={toggle}
                 setToggle={setToggle}
                 wideRow={false}
+                hasFileTree={true}
             />
 
         </div>

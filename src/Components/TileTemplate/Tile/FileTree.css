@@ -1,0 +1,36 @@
+.FileTree {}
+
+.File {
+    transition: .1s all ease-in-out;
+}
+
+.File:hover {
+    color: white;
+}
+
+.FileHeader {
+    display: flex;
+    transition: .1s all ease-in-out;
+    flex-direction: row;
+}
+
+.FileTreeIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 .25rem;
+}
+
+.FileTreeIconOpen {
+    transform: rotateZ(90deg);
+}
+
+.SubFile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.HideFile {
+    display: none;
+}

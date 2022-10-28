@@ -3,6 +3,7 @@ import './Tile.css'
 import Toggle from './Toggle'
 import { useState } from 'react'
 import styled from "styled-components";
+import FileTree from './FileTree';
 
 interface Props {
     element: string
@@ -12,6 +13,7 @@ interface Props {
     hasChart: string
     toggle: any
     readonly wideRow: any
+    hasFileTree: boolean
 }
 
 const TileDiv = styled.div<Props>`
@@ -31,7 +33,7 @@ const TileDiv = styled.div<Props>`
     box-shadow: 1px 1px 15px rgba(0, 0, 0, .25);
 `;
 
-const Tile: React.FC<Props> = ({ element, content, idx, hasToggle, hasChart, toggle, wideRow }) => {
+const Tile: React.FC<Props> = ({ element, content, idx, hasToggle, hasChart, toggle, wideRow, hasFileTree }) => {
     const [toggled, setToggle] = useState(true);
 
     const handleToggle = () => {
@@ -45,6 +47,7 @@ const Tile: React.FC<Props> = ({ element, content, idx, hasToggle, hasChart, tog
                 {element}
                 {hasChart === 'Yes' ? <ShowChart /> : null}
                 {/* {idx === 0 ? content : ' NOT'} */}
+                {hasFileTree ? <FileTree hasFileTree={hasFileTree} /> : null}
             </div >
         </>
     )

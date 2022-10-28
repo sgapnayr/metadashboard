@@ -20,20 +20,19 @@
 
 @keyframes slidein {
     0% {
-        transform: translateY(-30%);
-        opacity: 0;
+        transform: translateX(60%);
+        opacity: 1;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
     50% {
-        transform: translateY(0%);
         opacity: 1;
     }
 
     100% {
-        transform: translateY(30%);
+        transform: translateX(-100%);
         opacity: 0;
         display: flex;
         justify-content: center;
@@ -45,8 +44,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    animation-duration: 8s;
-    animation-name: slidein;
-    animation-iteration-count: infinite;
     color: white;
+    animation: slidein 90s linear infinite;
+    white-space: nowrap;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, .1);
+    font-weight: bold;
+    font-size: 1rem;
 }

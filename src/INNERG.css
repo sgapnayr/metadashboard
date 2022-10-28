@@ -1,7 +1,7 @@
 .INNERG {
     text-align: center;
     background: rgb(159, 159, 159);
-    background: linear-gradient(130deg, rgb(248, 248, 248) 0%, rgb(159, 179, 125) 45%, rgb(164, 165, 96) 100%);
+    background: linear-gradient(130deg, rgb(255, 255, 255) 0%, rgb(104, 186, 83) 45%, rgb(210, 231, 76) 100%);
 }
 
 body {
