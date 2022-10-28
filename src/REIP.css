@@ -41,6 +41,10 @@ a:hover {
   text-shadow: 1px 1px 12px rgba(0, 0, 0, 0)
 }
 
+p {
+  font-style: italic;
+}
+
 /* Data */
 .EconData {
   background-color: var(--color4);
