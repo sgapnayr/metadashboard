@@ -7,7 +7,7 @@ import './Chart.css'
 const Button = ({ dateValue, setDateValue }) => {
     return (
         <div className="Button">
-            <button onClick={() => setDateValue(dateValue)} dateValue={dateValue}>{dateValue}</button>
+            <button onClick={() => setDateValue(dateValue)} dateValue={dateValue}>{dateValue > 1500 ? 'Max' : dateValue > 364 ? Math.floor(dateValue / 365) + 'y' : dateValue > 29 ? Math.floor(dateValue / 30) + 'm' : dateValue + 'd'}</button>
         </div>
     )
 }
@@ -99,9 +99,12 @@ export default function ShowChart({ dateValue, setDateValue, coin = 'bitcoin' })
                     options={options}
                 />
                 <div className="DateButtons">
-                    <Button dateValue={10} setDateValue={setDateValue} />
-                    <Button dateValue={100} setDateValue={setDateValue} />
-                    <Button dateValue={250} setDateValue={setDateValue} />
+                    <Button dateValue={7} setDateValue={setDateValue} />
+                    <Button dateValue={30} setDateValue={setDateValue} />
+                    <Button dateValue={180} setDateValue={setDateValue} />
+                    <Button dateValue={365} setDateValue={setDateValue} />
+                    <Button dateValue={1200} setDateValue={setDateValue} />
+                    <Button dateValue={1501} setDateValue={setDateValue} />
                 </div>
             </div>
         </>

@@ -399,10 +399,6 @@ button:hover {
     display: none;
 }
 
-button:hover {
-    transform: scale(1.05);
-    box-shadow: 1px 1px 12px rgba(0, 0, 0, .3);
-}
 
 /* CheckList */
 .CheckList {
