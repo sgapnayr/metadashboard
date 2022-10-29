@@ -8,9 +8,9 @@
     overflow: scroll;
     height: 30vh;
     width: 100%;
-    margin: 1rem .5rem;
+    margin: 1rem .25rem;
     flex-direction: column;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, .5);
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, .25);
     background: rgba(255, 255, 255, .015);
     border-radius: 10px;
 }
@@ -101,7 +101,7 @@ select:focus {
     text-shadow: 1px 1px 10px rgba(0, 0, 0, .4);
     cursor: pointer;
     border-radius: 10px;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, .2);
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, .25);
     margin: .5rem;
     background: rgba(255, 255, 255, .015);
 }
