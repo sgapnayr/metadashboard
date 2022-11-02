@@ -31,6 +31,7 @@ function Buttons({ dateValue, setDateValue }) {
         const { value } = dateValue.target
         setButtonActive(value)
         console.log(dateValue)
+        setButtons()
     }
 
     return (
