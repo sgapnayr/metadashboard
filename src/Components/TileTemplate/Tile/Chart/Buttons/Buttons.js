@@ -19,7 +19,7 @@ function Buttons({ dateValue, setDateValue }) {
     ])
 
     const handleHighlightDate = (dateValue) => {
-        const { value } = e.target
+        const { value } = dateValue.target
         setButtonActive(value)
         console.log(dateValue)
     }

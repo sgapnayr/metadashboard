@@ -80,7 +80,7 @@ const News: React.FC<Props> = ({ news, setNews, newsCategory, setNewsCategory })
                         )
                     })}
 
-                    <button className='ShowButton' onClick={handleShowMore}>{showMoreActive ? 'Show Less' : 'Show More'}</button>
+                    <button className='ShowButton' onClick={handleShowMore}>{showMoreActive ? 'Show Less' : 'More Stores...'}</button>
                 </div>
             </div>
         </div>
