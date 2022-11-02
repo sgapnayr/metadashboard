@@ -45,14 +45,16 @@ const Tile = ({ dateValue, setDateValue, element, content, idx, hasToggle, hasCh
     };
 
     return (
-        <TileDiv onClick={handleToggle} hasWideRow={hasWideRow}>
+        <div className='Tile' onClick={handleToggle}>
+
             {hasToggle === 'Yes' ? <Toggle toggled={toggled} handleToggle={handleToggle} /> : null}
             <div className="TileHeader">
                 {element}
             </div>
             {hasChart === 'Yes' ? <ShowChart dateValue={dateValue} setDateValue={setDateValue} /> : null}
             {hasFileTree ? <FileTree /> : null}
-        </TileDiv>
+        </div>
+
     )
 }
 
