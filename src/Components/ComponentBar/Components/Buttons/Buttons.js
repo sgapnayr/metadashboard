@@ -3,7 +3,6 @@ import Button from './Button'
 import './Buttons.css'
 
 function Buttons({ dateValue, setDateValue }) {
-    const [buttonActive, setButtonActive] = useState('7d')
     const [buttons, setButtons] = useState([
         {
             number: 1,
@@ -24,10 +23,7 @@ function Buttons({ dateValue, setDateValue }) {
             number: 365,
         },
         {
-            number: 1200,
-        },
-        {
-            number: 1501,
+            number: 1301,
         },
     ])
 

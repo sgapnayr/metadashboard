@@ -1,4 +1,4 @@
-import './Component.css'
+import './Link.css'
 
 interface Props {
     link: string

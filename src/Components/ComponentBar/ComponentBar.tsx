@@ -1,6 +1,6 @@
-import Buttons from '../TileTemplate/Tile/Chart/Buttons/Buttons'
 import './ComponentBar.css'
-import LinkComponent from './Components/LinkComponent'
+import Buttons from './Components/Buttons/Buttons'
+import LinkComponent from './Components/Link/LinkComponent'
 
 interface Props {
     dateValue: number

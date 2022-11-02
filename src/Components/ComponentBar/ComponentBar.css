@@ -1,6 +1,7 @@
 .ComponentBar {
-    margin: -.5rem 0.25rem 1rem;
-    display: flex;
+    margin: -.75rem 0.25rem .75rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     align-items: center;
     flex-direction: row;

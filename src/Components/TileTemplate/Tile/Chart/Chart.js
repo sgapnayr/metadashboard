@@ -3,7 +3,6 @@ import { Chart as Chartjs } from 'chart.js/auto' // KEEP
 import { Line } from 'react-chartjs-2'
 import axios from 'axios'
 import './Chart.css'
-import Buttons from './Buttons/Buttons'
 
 export default function ShowChart({ dateValue, setDateValue, coin = 'bitcoin' }) {
     const [apiData, setApiData] = useState([])
