@@ -29,9 +29,8 @@ function Buttons({ dateValue, setDateValue }) {
 
     const handleHighlightDate = (dateValue) => {
         const { value } = dateValue.target
-        setButtonActive(value)
+        // setButtonActive(value)
         console.log(dateValue)
-        setButtons()
     }
 
     return (
