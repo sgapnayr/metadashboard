@@ -8,9 +8,10 @@ import ComponentBar from './Components/ComponentBar/ComponentBar';
 
 const App: React.FC = () => {
   const [news, setNews] = useState<any[]>([])
+  const [news2, setNews2] = useState<any[]>([])
   const [isActive, setIsActive] = useState<boolean>(false)
   const [dateValue, setDateValue] = useState<number>(30)
-  const [newsCategory, setNewsCategory] = useState<any[]>(['main'])
+  const [newsCategory, setNewsCategory] = useState<any>('main')
   const [sliderActive, setSliderActive] = useState<boolean>(true)
   const [dataName, setDataName] = useState<string>('bitcoin')
   const [toggle, setToggle] = useState<boolean>(true);
@@ -40,6 +41,8 @@ const App: React.FC = () => {
       <NewsColumns
         news={news}
         setNews={setNews}
+        news2={news2}
+        setNews2={setNews2}
         newsCategory={newsCategory}
         setNewsCategory={setNewsCategory} />
 

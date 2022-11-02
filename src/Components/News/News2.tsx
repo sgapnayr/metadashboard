@@ -14,7 +14,7 @@ interface Props {
     apiHeader: string
 }
 
-const News: React.FC<Props> = ({ news, setNews, newsCategory, setNewsCategory, apiURL, apiHeader }) => {
+const News: React.FC<Props> = ({ news2, setNews2, newsCategory, setNewsCategory, apiURL, apiHeader }) => {
     const [showMoreActive, setShowMoreActive] = useState<boolean>(false)
     const [index, setIndex] = useState(1)
 
@@ -29,7 +29,7 @@ const News: React.FC<Props> = ({ news, setNews, newsCategory, setNewsCategory, a
 
     async function GetNews() {
         Axios.request(options).then((response) => {
-            setNews(response.data.main);
+            setNews2(response.data.business);
         }).catch(function (error) {
             console.error(error);
         });
@@ -43,7 +43,7 @@ const News: React.FC<Props> = ({ news, setNews, newsCategory, setNewsCategory, a
     const handleShowMore = () => {
         if (!showMoreActive) {
             setShowMoreActive(true)
-            setIndex(news.length)
+            setIndex(news2.length)
         } else if (showMoreActive) {
             setShowMoreActive(false)
             setIndex(1)
@@ -60,8 +60,8 @@ const News: React.FC<Props> = ({ news, setNews, newsCategory, setNewsCategory, a
                 <div className="NewsTitle">
                     Category:
                     <select name="" id="" onChange={handleNewsCategory}>
-                        <option value="real-estate">Main</option>
                         <option value="business">Business</option>
+                        <option value="real-estate">Real Estate</option>
                         <option value="technology">Technology</option>
                     </select>
                 </div>
@@ -69,7 +69,7 @@ const News: React.FC<Props> = ({ news, setNews, newsCategory, setNewsCategory, a
 
             <div className='News'>
                 <div className="NewsList">
-                    {news.slice(0, index).map((newsItem, idx) => {
+                    {news2.slice(0, index).map((newsItem, idx) => {
                         return (
                             <div className="NewsCard" key={idx}>
                                 <div className='NewsTitle'>

@@ -6,10 +6,10 @@ function ComponentBar() {
         <div className='ComponentBar'>
             <LinkComponent
                 link={'https://energynewsbeat.co/ep/'}
-                textContent={' News Povided by Energy News Beat'} />
+                textContent={' News Povided by Energy News Beat™'} />
             <LinkComponent
                 link={'https://sportsubmit.netlify.app/'}
-                textContent={'Want a Custom Dashboard?'} />
+                textContent={'Want a personalized dashboard?'} />
         </div>
     )
 }
