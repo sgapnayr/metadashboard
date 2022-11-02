@@ -44,7 +44,7 @@ const Tile: React.FC<Props> = ({ dateValue, setDateValue, element, content, idx,
 
     return (
         <>
-            <div className='Tile' onClick={handleToggle}>
+            <div className={'Tile'} onClick={handleToggle}>
                 {hasToggle === 'Yes' ? <Toggle toggled={toggled} handleToggle={handleToggle} /> : null}
                 <div className="TileHeader">
                     {element}

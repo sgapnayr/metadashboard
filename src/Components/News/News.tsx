@@ -1,6 +1,6 @@
 import './News.css'
 import Axios from 'axios'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 interface Props {
     news: any[]
@@ -10,6 +10,9 @@ interface Props {
 }
 
 const News: React.FC<Props> = ({ news, setNews, newsCategory, setNewsCategory, }) => {
+    const [showMoreActive, setShowMoreActive] = useState<boolean>(false)
+    const [index, setIndex] = useState(1)
+
     const newsUrl = 'https://newsdata.io/api/1/news?apikey=pub_1122295a0600dd09ce2e7948214b07ef822fb&q=Real%20Estate '
 
     const options = {
@@ -22,7 +25,6 @@ const News: React.FC<Props> = ({ news, setNews, newsCategory, setNewsCategory, }
     };
 
     async function GetNews() {
-        // await Axios.get(newsUrl).then(res => console.log(res.data.results))
         Axios.request(options).then(function (response) {
             setNews(response.data.technology);
         }).catch(function (error) {
@@ -33,6 +35,16 @@ const News: React.FC<Props> = ({ news, setNews, newsCategory, setNewsCategory, }
     const handleNewsCategory = (e: any) => {
         const { value } = e.target
         setNewsCategory(value.toLowerCase())
+    }
+
+    const handleShowMore = () => {
+        if (!showMoreActive) {
+            setShowMoreActive(true)
+            setIndex(news.length)
+        } else if (showMoreActive) {
+            setShowMoreActive(false)
+            setIndex(1)
+        }
     }
 
     useEffect(() => {
@@ -54,32 +66,19 @@ const News: React.FC<Props> = ({ news, setNews, newsCategory, setNewsCategory, }
 
             <div className='News'>
                 <div className="NewsList">
-
-                    {news.map(newsItem => {
+                    {news.slice(0, index).map((newsItem, idx) => {
                         return (
-                            <>
-                                <div className="NewsCard">
-                                    {newsItem.title}
-                                    <p>
-                                        {newsItem.url}
-                                    </p>
-                                </div>
-                            </>
+                            <div className="NewsCard" key={idx}>
+                                {newsItem.title}
+                                <p>
+                                    {newsItem.url}
+                                </p>
+                            </div>
                         )
                     })}
 
-                    {/* {news.map(newsItem => {
-                        return (
-                            <>
-                                <div className="NewsCard" key={newsItem}>
-                                    <img src={newsItem.image_url} className={newsItem.image_url ? 'NewsImage' : 'none'} alt="News Image" />
-                                    <h2>{newsItem.title}</h2>
-                                    <p className='NewsInfo'>{newsItem.content ? newsItem.content?.slice(0, 200) + ' [...]' : null}</p>
-                                </div>
-                            </>
-                        )
-                    })} */}
                 </div>
+                <button className='ShowButton' onClick={handleShowMore}>{showMoreActive ? 'Show Less' : 'Show More'}</button>
             </div>
         </div>
     )

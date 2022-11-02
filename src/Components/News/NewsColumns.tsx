@@ -17,7 +17,11 @@ const NewsColumns: React.FC<Props> = ({ news, setNews, newsCategory, setNewsCate
                 setNews={setNews}
                 newsCategory={newsCategory}
                 setNewsCategory={setNewsCategory} />
-
+            <News
+                news={news}
+                setNews={setNews}
+                newsCategory={newsCategory}
+                setNewsCategory={setNewsCategory} />
             <News
                 news={news}
                 setNews={setNews}

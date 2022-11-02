@@ -3,14 +3,7 @@ import { Chart as Chartjs } from 'chart.js/auto' // KEEP
 import { Line } from 'react-chartjs-2'
 import axios from 'axios'
 import './Chart.css'
-
-const Button = ({ dateValue, setDateValue }) => {
-    return (
-        <div className="Button">
-            <button onClick={() => setDateValue(dateValue)} dateValue={dateValue}>{dateValue > 1500 ? 'Max' : dateValue > 364 ? Math.floor(dateValue / 365) + 'y' : dateValue > 29 ? Math.floor(dateValue / 30) + 'm' : dateValue + 'd'}</button>
-        </div>
-    )
-}
+import Buttons from './Buttons/Buttons'
 
 export default function ShowChart({ dateValue, setDateValue, coin = 'bitcoin' }) {
     const [apiData, setApiData] = useState([])
@@ -98,14 +91,7 @@ export default function ShowChart({ dateValue, setDateValue, coin = 'bitcoin' })
                     data={data}
                     options={options}
                 />
-                <div className="DateButtons">
-                    <Button dateValue={7} setDateValue={setDateValue} />
-                    {/* <Button dateValue={30} setDateValue={setDateValue} /> */}
-                    <Button dateValue={180} setDateValue={setDateValue} />
-                    <Button dateValue={365} setDateValue={setDateValue} />
-                    {/* <Button dateValue={1200} setDateValue={setDateValue} /> */}
-                    <Button dateValue={1501} setDateValue={setDateValue} />
-                </div>
+                <Buttons dateValue={dateValue} setDateValue={setDateValue} />
             </div>
         </>
     )

@@ -17,6 +17,26 @@
     background: rgba(255, 255, 255, .015);
 }
 
+.DarkTile {
+    width: 100%;
+    margin: .25rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: scroll;
+    color: white;
+    transition: .2s all ease-in-out;
+    cursor: pointer;
+    flex: 1;
+    border-radius: 10px;
+    font-size: small;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, .25);
+    overflow: hidden;
+    background: rgba(255, 255, 255, .015);
+    opacity: .25;
+}
+
 .Tile:hover {
     background-color: rgba(255, 255, 255, .05);
     color: rgb(211, 211, 211);

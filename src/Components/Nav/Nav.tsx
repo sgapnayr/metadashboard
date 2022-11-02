@@ -19,7 +19,7 @@ const Nav: React.FC<Props> = ({ isActive, setIsActive }) => {
             <div className="NavBar">
                 <div className="LeftSideNavBar">
                     <div className={pathname === '/' ? 'Title' : 'Title2'}>
-                        {pathname === '/' ? 'REIP' : 'INNERG'}
+                        {pathname === '/' ? 'Energy' : 'INNERG'}
                     </div>
                     <div className="CenterNavBar">
                     </div>
