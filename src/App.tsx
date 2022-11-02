@@ -36,7 +36,9 @@ const App: React.FC = () => {
         setToggle={setToggle}
       />
 
-      <ComponentBar />
+      <ComponentBar
+        dateValue={dateValue}
+        setDateValue={setDateValue} />
 
       <NewsColumns
         news={news}
@@ -44,7 +46,8 @@ const App: React.FC = () => {
         news2={news2}
         setNews2={setNews2}
         newsCategory={newsCategory}
-        setNewsCategory={setNewsCategory} />
+        setNewsCategory={setNewsCategory}
+      />
 
     </div>
   );

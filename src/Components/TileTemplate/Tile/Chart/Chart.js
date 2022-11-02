@@ -91,7 +91,6 @@ export default function ShowChart({ dateValue, setDateValue, coin = 'bitcoin' })
                     data={data}
                     options={options}
                 />
-                <Buttons dateValue={dateValue} setDateValue={setDateValue} />
             </div>
         </>
     )

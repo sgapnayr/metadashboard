@@ -1,20 +1,33 @@
 import { useState } from 'react'
 import Button from './Button'
+import './Buttons.css'
 
 function Buttons({ dateValue, setDateValue }) {
     const [buttonActive, setButtonActive] = useState('7d')
     const [buttons, setButtons] = useState([
         {
-            number: 7,
-            name: '7d'
+            number: 1,
+        },
+        {
+            number: 5,
         },
         {
             number: 30,
-            name: '30m'
+        },
+        {
+            number: 90,
+        },
+        {
+            number: 180,
         },
         {
             number: 365,
-            name: '1y'
+        },
+        {
+            number: 1200,
+        },
+        {
+            number: 1501,
         },
     ])
 
@@ -25,7 +38,7 @@ function Buttons({ dateValue, setDateValue }) {
     }
 
     return (
-        <div className="DateButtons">
+        <div className="Buttons">
             {buttons.map(button => {
                 return <Button dateValue={button.number} setDateValue={setDateValue} handleHighlightDate={handleHighlightDate} />
             })}
