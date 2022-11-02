@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import './Button.css'
 
 function Button({ dateValue, setDateValue, handleHighlightDate }) {
