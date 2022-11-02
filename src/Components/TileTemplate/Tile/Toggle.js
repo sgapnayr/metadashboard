@@ -6,7 +6,7 @@ const ToggleOuterContainer = styled.div`
   height: 30px;
   border-radius: 50px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
-  background-color: ${props => props.toggled === false ? '#2dceff' : '#b6b6b64d'};
+  background-color: ${props => props.toggled === false ? '#d9ba66' : '#b6b6b64d'};
   overflow: hidden;
   cursor: pointer;
   transition: all 0.2s ease;

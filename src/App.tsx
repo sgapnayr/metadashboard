@@ -1,4 +1,4 @@
-import './REIP.css';
+import './App.css';
 import { useState } from 'react'
 import Nav from './Components/Nav/Nav';
 import Ticker from './Components/Ticker/Ticker';

@@ -19,7 +19,7 @@ const Nav: React.FC<Props> = ({ isActive, setIsActive }) => {
             <div className="NavBar">
                 <div className="LeftSideNavBar">
                     <div className={pathname === '/' ? 'Title' : 'Title2'}>
-                        {pathname === '/' ? 'Energy' : 'INNERG'}
+                        {pathname === '/' ? 'Energy' : 'Energy'}
                     </div>
                     <div className="CenterNavBar">
                     </div>
@@ -33,8 +33,8 @@ const Nav: React.FC<Props> = ({ isActive, setIsActive }) => {
 
             <div className={isActive ? "Menu MenuActive" : 'Menu'}>
 
-                <Link to='/'>REIP</Link>
-                <Link to='/innerg'>INNERG</Link>
+                <Link to='/'>Energy</Link>
+                <Link to='/'>INNERG</Link>
             </div>
         </div>
     )

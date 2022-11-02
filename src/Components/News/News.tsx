@@ -7,26 +7,27 @@ interface Props {
     setNews: React.Dispatch<React.SetStateAction<any[]>>
     newsCategory: any[]
     setNewsCategory: React.Dispatch<React.SetStateAction<any[]>>
+
+    // apiURL: string
+    // apiHeader: string
 }
 
-const News: React.FC<Props> = ({ news, setNews, newsCategory, setNewsCategory, }) => {
+const News: React.FC<Props> = ({ news, setNews, newsCategory, setNewsCategory }) => {
     const [showMoreActive, setShowMoreActive] = useState<boolean>(false)
     const [index, setIndex] = useState(1)
-
-    const newsUrl = 'https://newsdata.io/api/1/news?apikey=pub_1122295a0600dd09ce2e7948214b07ef822fb&q=Real%20Estate '
 
     const options = {
         method: 'GET',
         url: 'https://ny-times-news-titles-and-urls.p.rapidapi.com/news',
         headers: {
-            'X-RapidAPI-Key': '2a5ae053bdmsh289fd6e9e075512p1bb69djsn1890178e4707',
+            'X-RapidAPI-Key': `2a5ae053bdmsh289fd6e9e075512p1bb69djsn1890178e4707`,
             'X-RapidAPI-Host': 'ny-times-news-titles-and-urls.p.rapidapi.com'
         }
     };
 
     async function GetNews() {
-        Axios.request(options).then(function (response) {
-            setNews(response.data.technology);
+        Axios.request(options).then((response) => {
+            setNews(response.data.business);
         }).catch(function (error) {
             console.error(error);
         });
@@ -69,7 +70,9 @@ const News: React.FC<Props> = ({ news, setNews, newsCategory, setNewsCategory, }
                     {news.slice(0, index).map((newsItem, idx) => {
                         return (
                             <div className="NewsCard" key={idx}>
-                                {newsItem.title}
+                                <div className='NewsTitle'>
+                                    {newsItem.title}
+                                </div>
                                 <p>
                                     {newsItem.url}
                                 </p>
@@ -77,8 +80,8 @@ const News: React.FC<Props> = ({ news, setNews, newsCategory, setNewsCategory, }
                         )
                     })}
 
+                    <button className='ShowButton' onClick={handleShowMore}>{showMoreActive ? 'Show Less' : 'Show More'}</button>
                 </div>
-                <button className='ShowButton' onClick={handleShowMore}>{showMoreActive ? 'Show Less' : 'Show More'}</button>
             </div>
         </div>
     )
