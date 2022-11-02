@@ -1,6 +1,5 @@
 .Tiles {
     display: flex;
-    flex-direction: column;
     height: 55vh;
     width: 100%;
     flex-direction: row;

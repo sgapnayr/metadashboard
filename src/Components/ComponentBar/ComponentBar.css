@@ -1,0 +1,16 @@
+.ComponentBar {
+    margin: -.5rem 0.25rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    overflow: scroll;
+    color: white;
+    transition: .2s all ease-in-out;
+    cursor: pointer;
+    flex: 1;
+    border-radius: 10px;
+    font-size: small;
+    overflow: hidden;
+    flex: 1;
+}

@@ -1,3 +1,4 @@
+import ComponentBar from '../ComponentBar/ComponentBar'
 import Column from './Column/Column'
 import './TileTemplate.css'
 
