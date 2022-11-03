@@ -26,7 +26,7 @@ const ToggleInnerContainer = styled.div`
 `;
 
 function Slider({ toggled, handleToggle }) {
-  const outerWidth = 50;
+  const outerWidth = 45;
 
   return (
     <ToggleOuterContainer toggled={toggled} outerWidth={outerWidth} onClick={handleToggle}>

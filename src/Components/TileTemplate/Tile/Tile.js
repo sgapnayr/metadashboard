@@ -48,7 +48,7 @@ const Tile = ({ dateValue, setDateValue, element, content, idx, hasToggle, hasCh
         <div className={hasWideRow === 'Yes' ? 'Tile2' : 'Tile'} onClick={handleToggle} >
             {hasToggle === 'Yes' ? <Toggle toggled={toggled} handleToggle={handleToggle} /> : null}
             <div className="TileHeader">
-                {element}
+                {content}
             </div>
             {hasChart === 'Yes' ? <ShowChart dateValue={dateValue} setDateValue={setDateValue} /> : null}
             {hasFileTree ? <FileTree /> : null}
