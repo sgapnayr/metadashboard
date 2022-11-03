@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './Button.css'
 
-function Button({ dateValue, setDateValue, handleHighlightDate }) {
+function Button({ dateValue, setDateValue, handleHighlightDate, isActive }) {
     const [buttonIsActive, setButtonIsActive] = useState(false)
 
     const handleButtonActive = () => {

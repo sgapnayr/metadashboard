@@ -1,3 +1,7 @@
+.ButtonActive {
+    color: white;
+}
+
 .Button {
     color: rgb(202, 202, 202);
     transition: .2s all ease-in-out;
