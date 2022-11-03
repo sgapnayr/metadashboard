@@ -81,7 +81,6 @@ const News: React.FC<Props> = ({ news, setNews, newsCategory, setNewsCategory, a
                             </div>
                         )
                     })}
-
                     <button className='ShowButton' onClick={handleShowMore}>{showMoreActive ? 'Show Less' : 'More Stores...'}</button>
                 </div>
             </div>
