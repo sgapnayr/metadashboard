@@ -9,7 +9,6 @@ interface Props {
     setNews2: React.Dispatch<React.SetStateAction<any[]>>
     newsCategory: any
     setNewsCategory: React.Dispatch<React.SetStateAction<any>>
-
     apiURL: string
     apiHeader: string
 }
