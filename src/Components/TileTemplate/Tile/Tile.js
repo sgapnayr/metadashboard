@@ -52,7 +52,7 @@ const Tile = ({ dateValue, setDateValue, element, content, idx, hasToggle, hasCh
             </div>
             {hasChart === 'Yes' ? <ShowChart dateValue={dateValue} setDateValue={setDateValue} /> : null}
             {hasFileTree ? <FileTree /> : null}
-        </div >
+        </div>
 
     )
 }

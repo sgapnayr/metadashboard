@@ -7,7 +7,7 @@ interface Props {
 
 const LinkComponent: React.FC<Props> = ({ link, textContent }) => {
     return (
-        <a href={link} className='Component Link' target={'_'}>
+        <a href={link} className='Link' target={'_'}>
             {textContent}
         </a>
     )

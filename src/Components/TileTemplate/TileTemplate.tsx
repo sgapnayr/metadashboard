@@ -49,7 +49,7 @@ const TileTemplate: React.FC<Props> = ({ dateValue, setDateValue, sliderActive, 
                 hasWideRow={'No'}
                 toggle={toggle}
                 setToggle={setToggle}
-                hasFileTree={true}
+                hasFileTree={false}
                 dateValue={dateValue}
                 setDateValue={setDateValue}
             />
