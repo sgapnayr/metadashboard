@@ -1,6 +1,6 @@
 .Tiles {
     display: flex;
-    height: 55vh;
+    height: 50vh;
     width: 100%;
     flex-direction: row;
 }

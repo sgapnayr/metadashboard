@@ -1,0 +1,14 @@
+.Button {
+    color: rgb(202, 202, 202);
+    transition: .2s all ease-in-out;
+    text-shadow: 1px 1px 10px rgba(255, 255, 255, .1);
+}
+
+.Button:hover {
+    color: white;
+    text-shadow: 1px 1px 12px rgba(255, 255, 255, .25);
+}
+
+.Button:active {
+    color: var(--color4);
+}
