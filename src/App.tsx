@@ -33,8 +33,7 @@ const App: React.FC = () => {
         dataName={dataName}
         setDataName={setDataName}
         toggle={toggle}
-        setToggle={setToggle}
-      />
+        setToggle={setToggle} />
 
       <ComponentBar
         dateValue={dateValue}
@@ -46,8 +45,7 @@ const App: React.FC = () => {
         news2={news2}
         setNews2={setNews2}
         newsCategory={newsCategory}
-        setNewsCategory={setNewsCategory}
-      />
+        setNewsCategory={setNewsCategory} />
 
     </div>
   );
