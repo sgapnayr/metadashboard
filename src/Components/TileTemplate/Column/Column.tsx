@@ -19,22 +19,20 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, element, content, nu
     const [idx, setIdx] = useState<number>(0)
 
     return (
-        <div className="Column">
+        <div className={hasWideRow === 'Yes' ? "WideColumn" : "Column"}>
 
             {numberOfTiles === 1 ?
-                <>
-                    <Tile
-                        element={element}
-                        content={content} idx={idx}
-                        hasChart={hasChart}
-                        hasToggle={'No'}
-                        toggle={toggle}
-                        hasWideRow={hasWideRow}
-                        hasFileTree={hasFileTree}
-                        dateValue={dateValue}
-                        setDateValue={setDateValue} />
-                </> :
-                numberOfTiles === 2 ?
+                <Tile
+                    element={element}
+                    content={content} idx={idx}
+                    hasChart={hasChart}
+                    hasToggle={'No'}
+                    toggle={toggle}
+                    hasWideRow={hasWideRow}
+                    hasFileTree={hasFileTree}
+                    dateValue={dateValue}
+                    setDateValue={setDateValue} />
+                : numberOfTiles === 2 ?
                     <>
                         <Tile
                             element={element}

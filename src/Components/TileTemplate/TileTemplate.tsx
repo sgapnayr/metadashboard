@@ -16,6 +16,7 @@ const TileTemplate: React.FC<Props> = ({ dateValue, setDateValue, sliderActive, 
     return (
         <div className='Tiles'>
 
+
             <Column
                 element={'Rates'}
                 content={'Information2'}

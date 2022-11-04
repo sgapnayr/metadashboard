@@ -4,3 +4,11 @@
     width: 100%;
     flex-direction: row;
 }
+
+.Column {
+    flex: 1;
+}
+
+.Column2 {
+    flex: 2;
+}
