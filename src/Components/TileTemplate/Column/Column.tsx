@@ -38,7 +38,7 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, element, content, nu
                     <>
                         <Tile
                             element={element}
-                            content={content} idx={idx}
+                            content={'Regional Natural Gas'} idx={idx}
                             hasChart={hasChart}
                             hasToggle={'Yes'}
                             toggle={toggle}
@@ -48,9 +48,9 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, element, content, nu
                             setDateValue={setDateValue} />
                         <Tile
                             element={element}
-                            content={content} idx={idx}
+                            content={'Enverus'} idx={idx}
                             hasChart={hasChart}
-                            hasToggle={'Yes'}
+                            hasToggle={'No'}
                             toggle={toggle}
                             hasWideRow={hasWideRow}
                             hasFileTree={hasFileTree}

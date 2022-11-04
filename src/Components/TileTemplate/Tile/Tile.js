@@ -45,7 +45,7 @@ const Tile = ({ dateValue, setDateValue, element, content, idx, hasToggle, hasCh
     };
 
     return (
-        <div className={hasWideRow === 'Yes' ? 'Tile2' : 'Tile'} onClick={handleToggle} >
+        <div className={hasToggle === 'Yes' && toggled ? 'Tile2' : 'Tile'} onClick={handleToggle} >
             {hasToggle === 'Yes' ? <Toggle toggled={toggled} handleToggle={handleToggle} /> : null}
             <div className="TileHeader">
                 {content}
