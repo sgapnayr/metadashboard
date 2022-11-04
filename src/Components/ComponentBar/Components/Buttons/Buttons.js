@@ -3,6 +3,7 @@ import Button from './Button'
 import './Buttons.css'
 
 function Buttons({ dateValue, setDateValue }) {
+    const [inActiveButtons, setInActiveButtons] = useState(false)
     const [buttons, setButtons] = useState([
         {
             number: 1,
@@ -34,16 +35,19 @@ function Buttons({ dateValue, setDateValue }) {
         },
     ])
 
-    const handleHighlightDate = (dateValue) => {
-        const { value } = dateValue.target
-        // setButtonActive(value)
-        console.log(dateValue)
+    const handleHighlightDate = (buttonIsActive, setButtonIsActive) => {
+        setButtonIsActive(buttonIsActive = false)
     }
 
     return (
         <div className="Buttons">
             {buttons.map(button => {
-                return <Button dateValue={button.number} setDateValue={setDateValue} onClick={handleHighlightDate} />
+                return <Button
+                    dateValue={button.number}
+                    setDateValue={setDateValue}
+                    inActiveButtons={inActiveButtons}
+                    setInActiveButtons={setInActiveButtons}
+                    handleHighlightDate={handleHighlightDate} />
             })}
         </div>
     )

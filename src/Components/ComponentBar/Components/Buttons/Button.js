@@ -1,25 +1,21 @@
 import { useState } from 'react'
 import './Button.css'
 
-function Button({ dateValue, setDateValue, handleHighlightDate, isActive }) {
+function Button({ dateValue, setDateValue, handleHighlightDate, inActiveButtons, setInActiveButtons, }) {
     const [buttonIsActive, setButtonIsActive] = useState(false)
 
     const handleButtonActive = () => {
-        if (buttonIsActive) {
-            setButtonIsActive(!buttonIsActive)
-        }
-        else {
-            setButtonIsActive(!buttonIsActive)
-        }
+        handleHighlightDate(buttonIsActive, setButtonIsActive)
+        setButtonIsActive(!buttonIsActive)
     }
 
     return (
         <div>
             <div className="Button" onClick={() => setDateValue(dateValue)}>
                 <button
-                    className={buttonIsActive ? 'ButtonActive Button' : 'Button'}
+                    className={buttonIsActive ? 'ButtonActive' : 'Button'}
                     dateValue={dateValue}
-                    onClick={(dateValue) => handleHighlightDate(dateValue)}>
+                    onClick={handleButtonActive}>
                     {dateValue > 1200 ? 'Max' : dateValue > 364 ? Math.floor(dateValue / 365) + 'y' : dateValue > 29 ? Math.floor(dateValue / 30) + 'm' : dateValue + 'd'}
                 </button>
             </div>

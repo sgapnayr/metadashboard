@@ -1,9 +1,13 @@
 .ButtonActive {
-    color: white;
+    color: rgb(255, 255, 255);
+    transition: .2s all ease-in-out;
+    text-shadow: 1px 1px 10px rgba(255, 255, 255, .1);
+    padding: .5rem 0.25rem;
+    font-size: 1rem;
 }
 
 .Button {
-    color: rgb(202, 202, 202);
+    color: rgb(134, 134, 134);
     transition: .2s all ease-in-out;
     text-shadow: 1px 1px 10px rgba(255, 255, 255, .1);
     padding: .5rem 0.25rem;
