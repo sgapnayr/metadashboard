@@ -20,8 +20,9 @@ function Button({ id, button, buttons, setButtons, dateValue, setDateValue }) {
         //     otherButton.isActive === false
         //     return otherButton
         // })
+
+        // Should i push old button
         console.log(otherButtons)
-        console.log(button, 'Button')
     }
 
     return (
