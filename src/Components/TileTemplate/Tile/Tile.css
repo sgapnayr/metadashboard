@@ -84,3 +84,8 @@
     padding: .5rem;
     text-shadow: 1px 1px 10px rgba(0, 0, 0, .25);
 }
+
+.EnverusImage {
+    object-fit: cover;
+    width: 100%;
+}

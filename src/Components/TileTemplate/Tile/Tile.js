@@ -4,19 +4,7 @@ import Toggle from './Toggle'
 import { useState } from 'react'
 import styled from "styled-components";
 import FileTree from './FileTree/FileTree';
-
-// interface Props {
-//     dateValue: number
-//     setDateValue: React.Dispatch<React.SetStateAction<number>>
-//     element: string
-//     idx: number
-//     content: string
-//     hasToggle: string
-//     hasChart: string
-//     toggle: any
-//     readonly wideRow: any
-//     hasFileTree: boolean
-// }
+import EnverusImage from '../../../Assets/images/Enverus_Logo.jpg'
 
 const TileDiv = styled.div`
     width: 100%;
@@ -37,7 +25,7 @@ const TileDiv = styled.div`
     background: rgba(255, 255, 255, .015);
 `;
 
-const Tile = ({ dateValue, setDateValue, element, content, idx, hasToggle, hasChart, toggle, hasWideRow, hasFileTree }) => {
+const Tile = ({ dateValue, setDateValue, element, content, idx, hasToggle, hasChart, hasImage, toggle, hasWideRow, hasFileTree }) => {
     const [toggled, setToggle] = useState(true);
 
     const handleToggle = () => {
@@ -46,6 +34,7 @@ const Tile = ({ dateValue, setDateValue, element, content, idx, hasToggle, hasCh
 
     return (
         <div className={hasToggle === 'Yes' && toggled ? 'Tile2' : 'Tile'} onClick={handleToggle} >
+            {hasImage === 'Yes' ? <img className='EnverusImage' src={EnverusImage} /> : ''}
             {hasToggle === 'Yes' ? <Toggle toggled={toggled} handleToggle={handleToggle} /> : null}
             <div className="TileHeader">
                 {content}
