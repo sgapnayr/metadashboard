@@ -3,51 +3,54 @@ import Button from './Button'
 import './Buttons.css'
 
 function Buttons({ dateValue, setDateValue }) {
-    const [inActiveButtons, setInActiveButtons] = useState(false)
     const [buttons, setButtons] = useState([
         {
             number: 1,
-            isActive: false
+            isActive: false,
+            id: 1
         },
         {
             number: 5,
-            isActive: false
+            isActive: false,
+            id: 2
         },
         {
             number: 30,
-            isActive: false
+            isActive: false,
+            id: 3
         },
         {
             number: 90,
-            isActive: false
+            isActive: false,
+            id: 4
         },
         {
             number: 180,
-            isActive: false
+            isActive: false,
+            id: 5
         },
         {
             number: 365,
-            isActive: false
+            isActive: false,
+            id: 6
         },
         {
             number: 1301,
-            isActive: false
+            isActive: false,
+            id: 7
         },
     ])
-
-    const handleHighlightDate = (buttonIsActive, setButtonIsActive) => {
-        setButtonIsActive(buttonIsActive = false)
-    }
 
     return (
         <div className="Buttons">
             {buttons.map(button => {
                 return <Button
+                    buttons={buttons}
+                    button={button}
+                    id={button.id}
+                    setButtons={setButtons}
                     dateValue={button.number}
-                    setDateValue={setDateValue}
-                    inActiveButtons={inActiveButtons}
-                    setInActiveButtons={setInActiveButtons}
-                    handleHighlightDate={handleHighlightDate} />
+                    setDateValue={setDateValue} />
             })}
         </div>
     )
