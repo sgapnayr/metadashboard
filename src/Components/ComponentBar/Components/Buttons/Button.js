@@ -21,8 +21,12 @@ function Button({ id, button, buttons, setButtons, dateValue, setDateValue }) {
         //     return otherButton
         // })
 
-        // Should i push old button
-        console.log(otherButtons)
+        // IDEAS
+        // Push old button to prevButton var
+        // Filter works great, but it keeps filtering... hmm
+        // Need to fix that, I guess that is same issue
+        console.log(otherButtons, 'The unselected buttons')
+        console.log(button, 'Button Selected')
     }
 
     return (
