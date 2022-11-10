@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 const ButtonComponent = styled.button`
     transition: .2s all ease-in-out;
+    font-size: 1rem;
     &:hover {
         color: white
     }
