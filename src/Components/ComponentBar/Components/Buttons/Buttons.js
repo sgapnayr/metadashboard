@@ -1,57 +1,42 @@
 import { useState } from 'react'
-import Button from './Button'
 import './Buttons.css'
+import styled from "styled-components";
+
+const ButtonComponent = styled.button`
+    transition: .2s all ease-in-out;
+    &:hover {
+        color: white
+    }
+    &:active {
+        transform: scale(.9)
+    }
+`;
 
 function Buttons({ dateValue, setDateValue }) {
-    const [buttons, setButtons] = useState([
-        {
-            number: 1,
-            isActive: false,
-            id: 1
-        },
-        {
-            number: 5,
-            isActive: false,
-            id: 2
-        },
-        {
-            number: 30,
-            isActive: false,
-            id: 3
-        },
-        {
-            number: 90,
-            isActive: false,
-            id: 4
-        },
-        {
-            number: 180,
-            isActive: false,
-            id: 5
-        },
-        {
-            number: 365,
-            isActive: false,
-            id: 6
-        },
-        {
-            number: 1301,
-            isActive: false,
-            id: 7
-        },
-    ])
+    const [buttons] = useState([1, 5, 30, 90, 180, 365, 1301])
+
+    const ButtonToggle = styled(ButtonComponent)`
+    color: grey;
+    ${({ active }) => active && `color: white`}
+    `
+
+    const ToggleButtonDates = () => {
+        return (
+            <>
+                {buttons.map((button) => (
+                    <ButtonToggle
+                        active={dateValue === button}
+                        onClick={() => setDateValue(button)}>
+                        {button > 1200 ? 'Max' : button > 364 ? Math.floor(button / 365) + 'y' : button > 29 ? Math.floor(button / 30) + 'm' : button + 'd'}
+                    </ButtonToggle>
+                ))}
+            </>
+        )
+    }
 
     return (
         <div className="Buttons">
-            {buttons.map(button => {
-                return <Button
-                    buttons={buttons}
-                    button={button}
-                    id={button.id}
-                    setButtons={setButtons}
-                    dateValue={button.number}
-                    setDateValue={setDateValue} />
-            })}
+            <ToggleButtonDates />
         </div>
     )
 }
