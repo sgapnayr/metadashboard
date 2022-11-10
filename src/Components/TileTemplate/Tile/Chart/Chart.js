@@ -15,7 +15,7 @@ export default function ShowChart({ dateValue, setDateValue, coin = 'bitcoin' })
 
     useEffect(() => {
         GetData()
-    }, [])
+    }, [dateValue])
 
     const priceData = apiData?.prices?.map(el => el[1])
     const volumeLabels = apiData?.total_volumes?.map(el => new Date(el[0]).getDate().toString()).map(el => el.length === 1 ? `0${el}` : el)

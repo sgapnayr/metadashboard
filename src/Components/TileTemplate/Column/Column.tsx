@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import Tile from '../Tile/Tile'
 import './Column.css'
 
@@ -16,15 +15,13 @@ interface Props {
 }
 
 const Column: React.FC<Props> = ({ dateValue, setDateValue, element, content, numberOfTiles, hasChart, toggle, setToggle, hasWideRow, hasFileTree }) => {
-    const [idx, setIdx] = useState<number>(0)
-
     return (
         <div className={hasWideRow === 'Yes' ? "WideColumn" : "Column"}>
 
             {numberOfTiles === 1 ?
                 <Tile
                     element={element}
-                    content={content} idx={idx}
+                    content={content}
                     hasChart={hasChart}
                     hasToggle={'No'}
                     toggle={toggle}
@@ -37,7 +34,7 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, element, content, nu
                     <>
                         <Tile
                             element={element}
-                            content={'Regional Natural Gas'} idx={idx}
+                            content={'Regional Natural Gas'}
                             hasChart={hasChart}
                             hasToggle={'Yes'}
                             toggle={toggle}
@@ -48,7 +45,7 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, element, content, nu
                             setDateValue={setDateValue} />
                         <Tile
                             element={element}
-                            content={'Enverus'} idx={idx}
+                            content={'Enverus'}
                             hasChart={hasChart}
                             hasToggle={'No'}
                             toggle={toggle}
@@ -61,7 +58,7 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, element, content, nu
                         <>
                             <Tile
                                 element={element}
-                                content={'SPR Storage'} idx={idx}
+                                content={'SPR Storage'}
                                 hasChart={hasChart}
                                 hasToggle={'No'}
                                 toggle={toggle}
@@ -72,7 +69,7 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, element, content, nu
                                 setDateValue={setDateValue} />
                             <Tile
                                 element={element}
-                                content={'Natural Gas Investments'} idx={idx}
+                                content={'Natural Gas Investments'}
                                 hasChart={hasChart}
                                 hasToggle={'Yes'}
                                 toggle={toggle}
@@ -83,7 +80,7 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, element, content, nu
                                 setDateValue={setDateValue} />
                             <Tile
                                 element={element}
-                                content={'Crude Oil Reported'} idx={idx}
+                                content={'Crude Oil Reported'}
                                 hasChart={hasChart}
                                 hasToggle={'Yes'}
                                 toggle={toggle}
@@ -97,7 +94,7 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, element, content, nu
                             <>
                                 <Tile
                                     element={element}
-                                    content={content} idx={idx}
+                                    content={content}
                                     hasChart={hasChart}
                                     hasToggle={'Yes'}
                                     toggle={toggle}
@@ -108,7 +105,7 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, element, content, nu
                                     setDateValue={setDateValue} />
                                 <Tile
                                     element={element}
-                                    content={content} idx={idx}
+                                    content={content}
                                     hasChart={hasChart}
                                     hasToggle={'Yes'}
                                     toggle={toggle}
@@ -119,7 +116,7 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, element, content, nu
                                     setDateValue={setDateValue} />
                                 <Tile
                                     element={element}
-                                    content={content} idx={idx}
+                                    content={content}
                                     hasChart={hasChart}
                                     hasToggle={'Yes'}
                                     toggle={toggle}
@@ -130,7 +127,7 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, element, content, nu
                                     setDateValue={setDateValue} />
                                 <Tile
                                     element={element}
-                                    content={content} idx={idx}
+                                    content={content}
                                     hasChart={hasChart}
                                     hasToggle={'Yes'}
                                     toggle={toggle}
