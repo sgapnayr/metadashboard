@@ -57,6 +57,7 @@ const News: React.FC<Props> = ({ news, setNews, newsCategory, setNewsCategory, a
         <div className='NewsColumn'>
             <div className="NewsHeading">
                 <div className="NewsTitle">
+                    SCategory:
                     <select name="" id="" onChange={handleNewsCategory}>
                         <option value="real-estate">Main</option>
                         <option value="business">Business</option>
