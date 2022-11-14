@@ -1,9 +1,8 @@
 const express = require('express')
 const router = express.Router()
+const { getRoute } = require('../Controllers/controllers')
 
-router.get('/home', (req, res) => {
-    res.send('Home Here')
-})
+router.get('/home', getRoute)
 
 router.get('/about', (req, res) => {
     res.send('About')

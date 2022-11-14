@@ -20,37 +20,37 @@ const TileTemplate: React.FC<Props> = ({ dateValue, setDateValue, sliderActive, 
                 element={'Rates'}
                 content={'Information2'}
                 numberOfTiles={3}
-                hasChart={'No'}
-                hasWideRow={'No'}
                 toggle={toggle}
                 setToggle={setToggle}
-                hasFileTree={false}
                 dateValue={dateValue}
                 setDateValue={setDateValue}
+                hasChart={'No'}
+                hasWideRow={'No'}
+                hasFileTree={false}
             />
             <Column
                 element={'Chart'}
                 content={'Information2'}
                 numberOfTiles={1}
-                hasChart={'Yes'}
-                hasWideRow={'Yes'}
                 toggle={toggle}
                 setToggle={setToggle}
-                hasFileTree={false}
                 dateValue={dateValue}
                 setDateValue={setDateValue}
+                hasChart={'Yes'}
+                hasWideRow={'Yes'}
+                hasFileTree={false}
             />
             <Column
                 element={'Demographics'}
                 content={'Information3'}
                 numberOfTiles={2}
-                hasChart={'No'}
-                hasWideRow={'No'}
                 toggle={toggle}
                 setToggle={setToggle}
-                hasFileTree={false}
                 dateValue={dateValue}
                 setDateValue={setDateValue}
+                hasChart={'No'}
+                hasWideRow={'No'}
+                hasFileTree={false}
             />
 
         </div>

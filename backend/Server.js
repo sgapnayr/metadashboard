@@ -5,7 +5,7 @@ const PORT = process.env.PORT
 const debug = require('debug')('app:startup')
 const colors = require('colors')
 const helmet = require('helmet')
-const routes = require('./Routes/routess')
+const routes = require('./Routes/routes')
 
 app.use(helmet())
 

@@ -22,120 +22,120 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, element, content, nu
                 <Tile
                     element={element}
                     content={content}
-                    hasChart={hasChart}
-                    hasToggle={'No'}
                     toggle={toggle}
+                    dateValue={dateValue}
+                    setDateValue={setDateValue}
+                    hasChart={hasChart}
                     hasWideRow={hasWideRow}
                     hasFileTree={hasFileTree}
-                    hasImage={'No'}
-                    dateValue={dateValue}
-                    setDateValue={setDateValue} />
+                    hasToggle={'No'}
+                    hasImage={'No'} />
                 : numberOfTiles === 2 ?
                     <>
                         <Tile
                             element={element}
                             content={'Regional Natural Gas'}
-                            hasChart={hasChart}
-                            hasToggle={'Yes'}
                             toggle={toggle}
-                            hasWideRow={hasWideRow}
-                            hasImage={'No'}
-                            hasFileTree={hasFileTree}
                             dateValue={dateValue}
-                            setDateValue={setDateValue} />
+                            setDateValue={setDateValue}
+                            hasChart={hasChart}
+                            hasWideRow={hasWideRow}
+                            hasFileTree={hasFileTree}
+                            hasToggle={'Yes'}
+                            hasImage={'No'} />
                         <Tile
                             element={element}
-                            content={'Enverus'}
-                            hasChart={hasChart}
-                            hasToggle={'No'}
+                            content={''}
                             toggle={toggle}
-                            hasWideRow={hasWideRow}
-                            hasImage={'Yes'}
                             hasFileTree={hasFileTree}
                             dateValue={dateValue}
-                            setDateValue={setDateValue} />
+                            setDateValue={setDateValue}
+                            hasChart={hasChart}
+                            hasWideRow={hasWideRow}
+                            hasToggle={'No'}
+                            hasImage={'Yes'} />
                     </> : numberOfTiles === 3 ?
                         <>
                             <Tile
                                 element={element}
                                 content={'SPR Storage'}
-                                hasChart={hasChart}
-                                hasToggle={'No'}
                                 toggle={toggle}
-                                hasWideRow={hasWideRow}
-                                hasImage={'No'}
-                                hasFileTree={hasFileTree}
                                 dateValue={dateValue}
-                                setDateValue={setDateValue} />
+                                setDateValue={setDateValue}
+                                hasChart={hasChart}
+                                hasWideRow={hasWideRow}
+                                hasFileTree={hasFileTree}
+                                hasToggle={'No'}
+                                hasImage={'No'} />
                             <Tile
                                 element={element}
                                 content={'Natural Gas Investments'}
-                                hasChart={hasChart}
-                                hasToggle={'Yes'}
                                 toggle={toggle}
-                                hasWideRow={hasWideRow}
-                                hasImage={'No'}
-                                hasFileTree={hasFileTree}
                                 dateValue={dateValue}
-                                setDateValue={setDateValue} />
+                                setDateValue={setDateValue}
+                                hasChart={hasChart}
+                                hasWideRow={hasWideRow}
+                                hasFileTree={hasFileTree}
+                                hasToggle={'Yes'}
+                                hasImage={'No'} />
                             <Tile
                                 element={element}
                                 content={'Crude Oil Reported'}
-                                hasChart={hasChart}
-                                hasToggle={'Yes'}
                                 toggle={toggle}
-                                hasWideRow={hasWideRow}
-                                hasImage={'No'}
-                                hasFileTree={hasFileTree}
                                 dateValue={dateValue}
-                                setDateValue={setDateValue} />
+                                setDateValue={setDateValue}
+                                hasChart={hasChart}
+                                hasWideRow={hasWideRow}
+                                hasFileTree={hasFileTree}
+                                hasToggle={'Yes'}
+                                hasImage={'No'} />
                         </> :
                         numberOfTiles === 4 ?
                             <>
                                 <Tile
                                     element={element}
                                     content={content}
-                                    hasChart={hasChart}
-                                    hasToggle={'Yes'}
                                     toggle={toggle}
-                                    hasWideRow={hasWideRow}
-                                    hasImage={'No'}
-                                    hasFileTree={hasFileTree}
                                     dateValue={dateValue}
-                                    setDateValue={setDateValue} />
+                                    setDateValue={setDateValue}
+                                    hasChart={hasChart}
+                                    hasWideRow={hasWideRow}
+                                    hasFileTree={hasFileTree}
+                                    hasToggle={'Yes'}
+                                    hasImage={'No'} />
                                 <Tile
                                     element={element}
                                     content={content}
-                                    hasChart={hasChart}
-                                    hasToggle={'Yes'}
                                     toggle={toggle}
-                                    hasWideRow={hasWideRow}
-                                    hasImage={'No'}
-                                    hasFileTree={hasFileTree}
                                     dateValue={dateValue}
-                                    setDateValue={setDateValue} />
+                                    setDateValue={setDateValue}
+                                    hasChart={hasChart}
+                                    hasWideRow={hasWideRow}
+                                    hasFileTree={hasFileTree}
+                                    hasToggle={'Yes'}
+                                    hasImage={'No'} />
                                 <Tile
                                     element={element}
                                     content={content}
-                                    hasChart={hasChart}
-                                    hasToggle={'Yes'}
                                     toggle={toggle}
-                                    hasWideRow={hasWideRow}
-                                    hasImage={'No'}
-                                    hasFileTree={hasFileTree}
                                     dateValue={dateValue}
-                                    setDateValue={setDateValue} />
+                                    setDateValue={setDateValue}
+                                    hasChart={hasChart}
+                                    hasWideRow={hasWideRow}
+                                    hasFileTree={hasFileTree}
+                                    hasToggle={'Yes'}
+                                    hasImage={'No'} />
                                 <Tile
                                     element={element}
                                     content={content}
-                                    hasChart={hasChart}
-                                    hasToggle={'Yes'}
                                     toggle={toggle}
-                                    hasWideRow={hasWideRow}
-                                    hasImage={'No'}
-                                    hasFileTree={hasFileTree}
                                     dateValue={dateValue}
-                                    setDateValue={setDateValue} />
+                                    setDateValue={setDateValue}
+                                    hasChart={hasChart}
+                                    hasWideRow={hasWideRow}
+                                    hasFileTree={hasFileTree}
+                                    hasToggle={'Yes'}
+                                    hasImage={'No'} />
                             </> : null}
         </div>
     )
